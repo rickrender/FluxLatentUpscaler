@@ -1,6 +1,6 @@
 # Flux Latent Upscaler
 
-![Generated Image 1](https://github.com/rickrender/FluxLatentDetailer/blob/main/FluxLatentDetailer.png)
+![Generated Image 1](https://github.com/rickrender/FluxLatentUpscaler/blob/main/Samples/FluxLatentUpscaler_Before_After.png)
 
 ## Description
 
@@ -13,6 +13,8 @@ Seed Modulation will adjust the 3rd pass slightly allowing you to skip over the 
 All of the outputs in the examples have a film grain effect applied, this helps with adding an analog film vibe, if you don't like it just bypass that node.
 
 The workflow has been tested with photo-style images and demonstrates Flux's flexibility in latent upscaling compared to earlier diffusion models. This imperfect experiment offers a foundation for further refinement and exploration. My hope is that you find it to be a useful part of your own workflow. No subscriptions, no paywalls and no bullshit. I spend days on these projects, this workflow isn't perfect and I'm sure I missed something on this first version. This might not work for everyone and I make no claims that it will. Latent upscaling is slow and there's no getting around that without faster GPUs.
+
+You can see A/B comparisons of 8 examples on my website: https://renderartist.com/portfolio/flux-latent-upscaler/
 
 **JUST AN EXPERIMENT - I DO NOT PROVIDE SUPPORT FOR THIS, I'M JUST SHARING!**
 
