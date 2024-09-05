@@ -1,4 +1,4 @@
-# Flux Latent Detailer
+# Flux Latent Upscaler
 
 ![Generated Image 1](https://github.com/rickrender/FluxLatentDetailer/blob/main/FluxLatentDetailer.png)
 
@@ -10,7 +10,9 @@ This approach seems to help maintain a composition from a smaller size while enh
 
 Seed Modulation will adjust the 3rd pass slightly allowing you to skip over the previous passes for slight changes to the same composition, this 3rd pass takes ~112 seconds on my RTX 4090 with 24GB of VRAM. It's taking the fixed seed from the first pass and mixing it with a new random seed which helps when iterating if there are inconsistencies. If something looks slightly off, try a reroll.
 
-The workflow has been tested with photo-style images and demonstrates Flux's flexibility in latent upscaling compared to earlier diffusion models. This imperfect experiment offers a foundation for further refinement and exploration. My hope is that you find it to be a useful part of your own workflow. No subscriptions, no paywalls and no bullshit. Please try not to be a dick -- I spend days on these projects, this workflow isn't perfect and I'm sure I missed something on this first version. This might not work for everyone and I make no claims that it will. Latent upscaling is slow and there's no getting around that without faster GPUs.
+All of the outputs in the examples have a film grain effect applied, this helps with adding an analog film vibe, if you don't like it just bypass that node.
+
+The workflow has been tested with photo-style images and demonstrates Flux's flexibility in latent upscaling compared to earlier diffusion models. This imperfect experiment offers a foundation for further refinement and exploration. My hope is that you find it to be a useful part of your own workflow. No subscriptions, no paywalls and no bullshit. I spend days on these projects, this workflow isn't perfect and I'm sure I missed something on this first version. This might not work for everyone and I make no claims that it will. Latent upscaling is slow and there's no getting around that without faster GPUs.
 
 **JUST AN EXPERIMENT - I DO NOT PROVIDE SUPPORT FOR THIS, I'M JUST SHARING!**
 
