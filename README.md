@@ -7,6 +7,9 @@
 This Flux latent upscaler workflow creates a lower-resolution initial pass, then advances to a second pass that upscales in latent space to twice the original size. Latent space manipulations in the second pass largely preserve the original composition, though some changes occur when doubling the resolution. The resolution is not exactly 2x but very close.
 
 This approach seems to help maintain a composition from a smaller size while enhancing fine details in the final passes. Some unresolved hallucination effects may appear, and users are encouraged to adjust values to their liking. 
+
+The workflow has been tested with photo-style images and demonstrates Flux's flexibility in latent upscaling compared to earlier diffusion models. This imperfect experiment offers a foundation for further refinement and exploration. My hope is that you find it to be a useful part of your own workflow. No subscriptions, no paywalls and no bullshit. Please try not to be a dick -- I spend days on these projects, this workflow isn't perfect and I'm sure I missed something on this first version. This might not work for everyone and I make no claims that it will. Latent upscaling is slow and there's no getting around that without faster GPUs.
+
 **I CANNOT PROVIDE SUPPORT FOR THIS, I'M JUST SHARING!**
 
 ## Resources
