@@ -851,12 +851,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_armuo_00293_.png&type=temp&subfolder=&rand=0.39298655320001863"
+            "url": "/api/view?filename=rgthree.compare._temp_armuo_00315_.png&type=temp&subfolder=&rand=0.8268095191709611"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_armuo_00294_.png&type=temp&subfolder=&rand=0.40497507715116654"
+            "url": "/api/view?filename=rgthree.compare._temp_armuo_00316_.png&type=temp&subfolder=&rand=0.5962864167481768"
           }
         ]
       ]
@@ -885,39 +885,6 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 28,
-      "type": "String Literal",
-      "pos": [
-        700,
-        815
-      ],
-      "size": {
-        "0": 386.9610290527344,
-        "1": 272.82080078125
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            47
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "String Literal"
-      },
-      "widgets_values": [
-        "flmft style 50mm closeup  photograph This is a high-resolution photograph of a majestic Bengal tiger lying on a large, rough wooden log, which spans diagonally across the lower half of the image. The tiger's fur is a striking blend of orange and black stripes, with a white underbelly and inner legs. Its piercing green eyes are fixed on something off-camera, giving a sense of alertness and intensity. The tiger's paws are draped over the log, with its front legs stretched out and its head resting on its paws, creating a relaxed yet regal pose.\n\nThe background is a stunning gradient of colors, transitioning from deep purple at the top to vibrant orange and yellow at the bottom, suggesting a sunset or sunrise scene. The sky is filled with soft, wispy clouds, adding depth and texture to the sky. The lighting is warm and natural, highlighting the tiger's fur and the wood's texture. The overall composition is balanced, with the tiger as the central focus and the dramatic sky providing a serene backdrop. The photograph captures the beauty and power of the tiger in a serene yet powerful setting."
-      ]
     },
     {
       "id": 166,
@@ -974,7 +941,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1009,7 +976,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1193,65 +1160,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 61,
-      "type": "ModelSamplingFlux",
-      "pos": [
-        403,
-        391
-      ],
-      "size": {
-        "0": 321.8402404785156,
-        "1": 122
-      },
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 368
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "link": 102,
-          "widget": {
-            "name": "width"
-          }
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "link": 104,
-          "widget": {
-            "name": "height"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            369,
-            380
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ModelSamplingFlux"
-      },
-      "widgets_values": [
-        1.1500000000000001,
-        0.5,
-        1024,
-        1024
-      ]
-    },
-    {
       "id": 11,
       "type": "DualCLIPLoader",
       "pos": [
@@ -1263,7 +1171,7 @@
         "1": 106
       },
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1298,7 +1206,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1332,7 +1240,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1356,39 +1264,314 @@
       ]
     },
     {
-      "id": 25,
-      "type": "RandomNoise",
+      "id": 17,
+      "type": "BasicScheduler",
       "pos": [
-        420,
-        235
+        804,
+        71
       ],
       "size": {
-        "0": 327.1990661621094,
-        "1": 94.58134460449219
+        "0": 281.2428283691406,
+        "1": 106
       },
       "flags": {},
-      "order": 7,
+      "order": 22,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 381,
+          "slot_index": 0
+        }
+      ],
       "outputs": [
         {
-          "name": "NOISE",
-          "type": "NOISE",
+          "name": "SIGMAS",
+          "type": "SIGMAS",
           "links": [
-            37,
-            186,
-            306
+            20
           ],
           "slot_index": 0,
           "shape": 3
         }
       ],
       "properties": {
-        "Node name for S&R": "RandomNoise"
+        "Node name for S&R": "BasicScheduler"
       },
       "widgets_values": [
-        157816514190057,
-        "fixed"
+        "simple",
+        20,
+        1
+      ]
+    },
+    {
+      "id": 16,
+      "type": "KSamplerSelect",
+      "pos": [
+        811,
+        218
+      ],
+      "size": {
+        "0": 268.2277526855469,
+        "1": 58
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            19,
+            184,
+            297
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "euler"
+      ]
+    },
+    {
+      "id": 237,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        812,
+        330
+      ],
+      "size": {
+        "0": 268.2315368652344,
+        "1": 82
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 380
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            381,
+            382,
+            383
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "flux\\Hyper-FLUX.1-dev-16steps-lora.safetensors",
+        0.13
+      ]
+    },
+    {
+      "id": 235,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        813,
+        461
+      ],
+      "size": {
+        "0": 263.0806884765625,
+        "1": 82
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 369
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            370,
+            371
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "flux\\Hyper-FLUX.1-dev-8steps-lora.safetensors",
+        0.13
+      ]
+    },
+    {
+      "id": 231,
+      "type": "Note",
+      "pos": [
+        3345,
+        -165
+      ],
+      "size": {
+        "0": 369.1934509277344,
+        "1": 141.28677368164062
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Seed Modulation will adjust the 3rd pass slightly allowing you to skip over the previous passes for slight changes to the same composition, this 3rd pass takes ~63 seconds on my RTX 4090 with 24GB of VRAM.\n\nIt's taking the fixed seed from the first pass and mixing it with a new random seed which helps when iterating if there are inconsistencies. If something looks slightly off, try a reroll."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 168,
+      "type": "Latent Upscale by Factor (WAS)",
+      "pos": [
+        1567,
+        -355
+      ],
+      "size": {
+        "0": 252,
+        "1": 106
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 273
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            277,
+            293
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Latent Upscale by Factor (WAS)"
+      },
+      "widgets_values": [
+        "bilinear",
+        1.96,
+        "true"
+      ]
+    },
+    {
+      "id": 161,
+      "type": "BasicScheduler",
+      "pos": [
+        1932,
+        263
+      ],
+      "size": {
+        "0": 210,
+        "1": 106
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 371,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            191
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "simple",
+        8,
+        0.5
+      ]
+    },
+    {
+      "id": 207,
+      "type": "BasicScheduler",
+      "pos": [
+        2644,
+        261
+      ],
+      "size": {
+        "0": 210,
+        "1": 106
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 383,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            295
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "simple",
+        16,
+        0.7000000000000001
       ]
     },
     {
@@ -1453,166 +1636,6 @@
       ]
     },
     {
-      "id": 17,
-      "type": "BasicScheduler",
-      "pos": [
-        804,
-        71
-      ],
-      "size": {
-        "0": 281.2428283691406,
-        "1": 106
-      },
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 381,
-          "slot_index": 0
-        }
-      ],
-      "outputs": [
-        {
-          "name": "SIGMAS",
-          "type": "SIGMAS",
-          "links": [
-            20
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "BasicScheduler"
-      },
-      "widgets_values": [
-        "simple",
-        20,
-        1
-      ]
-    },
-    {
-      "id": 16,
-      "type": "KSamplerSelect",
-      "pos": [
-        811,
-        218
-      ],
-      "size": {
-        "0": 268.2277526855469,
-        "1": 58
-      },
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "SAMPLER",
-          "type": "SAMPLER",
-          "links": [
-            19,
-            184,
-            297
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSamplerSelect"
-      },
-      "widgets_values": [
-        "euler"
-      ]
-    },
-    {
-      "id": 237,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        812,
-        330
-      ],
-      "size": [
-        268.23155004855994,
-        82
-      ],
-      "flags": {},
-      "order": 19,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 380
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            381,
-            382,
-            383
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoraLoaderModelOnly"
-      },
-      "widgets_values": [
-        "flux\\Hyper-FLUX.1-dev-16steps-lora.safetensors",
-        0.13
-      ]
-    },
-    {
-      "id": 235,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        813,
-        461
-      ],
-      "size": [
-        263.0806768715686,
-        82
-      ],
-      "flags": {},
-      "order": 18,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 369
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            370,
-            371
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoraLoaderModelOnly"
-      },
-      "widgets_values": [
-        "flux\\Hyper-FLUX.1-dev-8steps-lora.safetensors",
-        0.13
-      ]
-    },
-    {
       "id": 214,
       "type": "LoraLoader",
       "pos": [
@@ -1663,20 +1686,148 @@
       },
       "widgets_values": [
         "flux\\araminta_k_flux_koda.safetensors",
-        0.3,
+        0.6,
         0.5
       ]
     },
     {
-      "id": 231,
-      "type": "Note",
+      "id": 61,
+      "type": "ModelSamplingFlux",
       "pos": [
-        3345,
-        -165
+        403,
+        391
       ],
       "size": {
-        "0": 369.1934509277344,
-        "1": 141.28677368164062
+        "0": 321.8402404785156,
+        "1": 122
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 368
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 102,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 104,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            369,
+            380
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingFlux"
+      },
+      "widgets_values": [
+        0.5,
+        0.5,
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": 25,
+      "type": "RandomNoise",
+      "pos": [
+        420,
+        235
+      ],
+      "size": {
+        "0": 327.1990661621094,
+        "1": 94.58134460449219
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            37,
+            186,
+            306
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        157816514190058,
+        "fixed"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "String Literal",
+      "pos": [
+        700,
+        815
+      ],
+      "size": {
+        "0": 386.9610290527344,
+        "1": 272.82080078125
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            47
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "String Literal"
+      },
+      "widgets_values": [
+        "flmft style 50mm closeup  photograph This is a high-resolution photograph of a majestic Bengal tiger lying on a large, rough wooden log, which spans diagonally across the lower half of the image. The tiger's fur is a striking blend of orange and black stripes, with a white underbelly and inner legs. Its piercing green eyes are fixed on something off-camera, giving a sense of alertness and intensity. The tiger's paws are draped over the log, with its front legs stretched out and its head resting on its paws, creating a relaxed yet regal pose.\n\nThe background is a stunning gradient of colors, transitioning from deep purple at the top to vibrant orange and yellow at the bottom, suggesting a sunset or sunrise scene. The sky is filled with soft, wispy clouds, adding depth and texture to the sky. The lighting is warm and natural, highlighting the tiger's fur and the wood's texture. The overall composition is balanced, with the tiger as the central focus and the dramatic sky providing a serene backdrop. The photograph captures the beauty and power of the tiger in a serene yet powerful setting."
+      ]
+    },
+    {
+      "id": 211,
+      "type": "Note",
+      "pos": [
+        0,
+        740
+      ],
+      "size": {
+        "0": 472.07757568359375,
+        "1": 422.5624694824219
       },
       "flags": {},
       "order": 11,
@@ -1687,7 +1838,7 @@
         "text": ""
       },
       "widgets_values": [
-        "Seed Modulation will adjust the 3rd pass slightly allowing you to skip over the previous passes for slight changes to the same composition, this 3rd pass takes ~63 seconds on my RTX 4090 with 24GB of VRAM.\n\nIt's taking the fixed seed from the first pass and mixing it with a new random seed which helps when iterating if there are inconsistencies. If something looks slightly off, try a reroll."
+        "u/shootthesound on Reddit shared some improvements for performance on cards with lower specs, this modified version of the Flux Latent Upscaler workflow uses the new text encoder model which is said to improve details in Flux: ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF\n\nhttps://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/blob/main/ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors\n\nPlace it in models/clip\n\nBytedance 16 step and 8 Step Flux loras are used to cut steps and speed up inference\n\nhttps://huggingface.co/ByteDance/Hyper-SD/blob/main/Hyper-FLUX.1-dev-16steps-lora.safetensors\n\nhttps://huggingface.co/ByteDance/Hyper-SD/blob/main/Hyper-FLUX.1-dev-8steps-lora.safetensors\n\nPlace them both in models/loras\n\nu/shootthesound also adjusted step count changes at all stages cut the time from ~280 seconds to just over 100 seconds using a 4090 with 24GB of VRAM, the speed improvements should be noticeable with all cards capable of running Flux dev. There is a slight degradation in quality but the reduction in system resources and time makes it worth it, especially if running lower on specs. Some changes occur in the final output but overall this is very close to the original workflow in terms of detail and prompt adherence, of course this is a different approach and results may vary. \n\nrenderartist.com\n@renderartist\n\n"
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -1722,159 +1873,8 @@
         "Node name for S&R": "RandomNoise"
       },
       "widgets_values": [
-        157816514189951,
+        157816514189960,
         "increment"
-      ]
-    },
-    {
-      "id": 211,
-      "type": "Note",
-      "pos": [
-        0,
-        740
-      ],
-      "size": [
-        472.07756106127584,
-        422.5624789902472
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {
-        "text": ""
-      },
-      "widgets_values": [
-        "u/shootthesound on Reddit shared some improvements for performance on cards with lower specs, this modified version of the Flux Latent Upscaler workflow uses the new text encoder model which is said to improve details in Flux: ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF\n\nhttps://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/blob/main/ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors\n\nPlace it in models/clip\n\nBytedance 16 step and 8 Step Flux loras are used to cut steps and speed up inference\n\nhttps://huggingface.co/ByteDance/Hyper-SD/blob/main/Hyper-FLUX.1-dev-16steps-lora.safetensors\n\nhttps://huggingface.co/ByteDance/Hyper-SD/blob/main/Hyper-FLUX.1-dev-8steps-lora.safetensors\n\nPlace them both in models/loras\n\nu/shootthesound also adjusted settings on Model Sampling Flux node \n\nStep count changes at all stages cut the time from ~280 seconds to just over 100 seconds using a 4090 with 24GB of VRAM, the speed improvements should be noticeable with all cards capable of running Flux dev. There is a slight degradation in quality but the reduction in system resources and time makes it worth it, especially if running lower on specs. Some changes occur in the final output but overall this is very close to the original workflow in terms of detail and prompt adherence, of course this is a different approach and results may vary. \n\nrenderartist.com\n@renderartist\n\n"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 168,
-      "type": "Latent Upscale by Factor (WAS)",
-      "pos": [
-        1567,
-        -355
-      ],
-      "size": {
-        "0": 252,
-        "1": 106
-      },
-      "flags": {},
-      "order": 28,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 273
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            277,
-            293
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Latent Upscale by Factor (WAS)"
-      },
-      "widgets_values": [
-        "bilinear",
-        1.96,
-        "true"
-      ]
-    },
-    {
-      "id": 207,
-      "type": "BasicScheduler",
-      "pos": [
-        2644,
-        261
-      ],
-      "size": {
-        "0": 210,
-        "1": 106
-      },
-      "flags": {},
-      "order": 23,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 383,
-          "slot_index": 0
-        }
-      ],
-      "outputs": [
-        {
-          "name": "SIGMAS",
-          "type": "SIGMAS",
-          "links": [
-            295
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "BasicScheduler"
-      },
-      "widgets_values": [
-        "simple",
-        16,
-        0.7000000000000001
-      ]
-    },
-    {
-      "id": 161,
-      "type": "BasicScheduler",
-      "pos": [
-        1932,
-        263
-      ],
-      "size": {
-        "0": 210,
-        "1": 106
-      },
-      "flags": {},
-      "order": 21,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 371,
-          "slot_index": 0
-        }
-      ],
-      "outputs": [
-        {
-          "name": "SIGMAS",
-          "type": "SIGMAS",
-          "links": [
-            191
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "BasicScheduler"
-      },
-      "widgets_values": [
-        "simple",
-        8,
-        0.5
       ]
     }
   ],
@@ -2513,14 +2513,14 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.45949729863572264,
+      "scale": 0.6727499949325664,
       "offset": [
-        331.75990429542964,
-        383.60216017711343
+        -1943.205121568155,
+        493.68996579891177
       ]
     },
     "workspace_info": {
-      "id": "eq7cFKg9LbJwzJH1vfm08"
+      "id": "MWno_uJ3vcGtoyt42dDp0"
     },
     "groupNodes": {}
   },
