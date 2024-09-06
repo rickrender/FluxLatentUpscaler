@@ -2,6 +2,9 @@
 
 ![Generated Image 1](https://github.com/rickrender/FluxLatentUpscaler/blob/main/Samples/FluxLatentUpscaler_Before_After.png)
 
+## Updates
+09/06/24 - Added an alternative version of the Flux Latent Upscaler workflow, this modified version uses Hyper Flux loras and a new clip text encoder made specifically for Flux and SD3, combined these cut inference time from ~280 seconds down to just over 100 seconds on a 4090 with 24GB of VRAM. All credit for this version goes to u/shootthesound for pointing this out and sharing his tests. The Hyper Flux version is labeled "Flux Latent Upscaler - Hyper Flux Loras.json" and can be found in the root of the repo. You need to download the new clip model and the two Hyper Flux loras, direct links to the Huggingface files are embedded in the workflow. Slight degradation in quality but HUGE boost in speed.
+
 ## Description
 
 This Flux latent upscaler workflow creates a lower-resolution initial pass, then advances to a second pass that upscales in latent space to twice the original size. Latent space manipulations in the second pass largely preserve the original composition, though some changes occur when doubling the resolution. The resolution is not exactly 2x but very close.
